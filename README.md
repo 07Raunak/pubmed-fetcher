@@ -2,74 +2,111 @@
 
 ---
 
-# **PubMed Research Paper Fetcher**  
 
-## **📌 Overview**  
-This project is a Python-based CLI tool to fetch research papers from PubMed, extract metadata (title, authors, DOI, affiliations), and save results to a CSV file. It helps identify non-academic authors and filter research based on affiliations.  
-
-## **🛠 Features**  
-✅ Fetch research papers from PubMed using queries.  
-✅ Extract metadata like title, authors, publication date, DOI link.  
-✅ Identify non-academic authors based on affiliations.  
-✅ Save results in a structured CSV format.  
-
----
-
-## **📂 Installation**  
-
-### **1️⃣ Clone the Repository**  
-```bash
-git clone https://github.com/YOUR_USERNAME/pubmed-fetcher.git
-cd pubmed-fetcher
+### **1️⃣ Project Title**
 ```
-
-### **2️⃣ Install Dependencies**  
-Make sure you have Python **3.9 or higher** installed. Then, install dependencies using Poetry:  
-```bash
-poetry install
-```
-
-### **3️⃣ Set Up API Key**  
-Create a `.env` file in the project root and add your API key:  
-```bash
-GEMINI_API_KEY=your_api_key_here
+# PubMed Fetcher
+A Python CLI tool to fetch and filter research papers from PubMed based on keywords.
 ```
 
 ---
 
-## **🚀 Usage**  
-Run the script with a search query to fetch papers:  
+### **2️⃣ Project Description**
+```
+## Overview
+PubMed Fetcher is a Python-based CLI tool that allows users to search for research papers on PubMed using a query, extract relevant details, and save them to a CSV file.
+
+This tool is useful for researchers, students, and professionals who need to analyze scientific literature efficiently.
+```
+
+---
+
+### **3️⃣ Features**
+```
+## Features
+✔️ Fetches research papers from PubMed based on search queries  
+✔️ Extracts metadata such as title, authors, publication date, and DOI  
+✔️ Identifies non-academic authors using predefined keywords  
+✔️ Saves results in a CSV file for further analysis  
+✔️ Command-line interface (CLI) for easy use  
+```
+
+---
+
+### **4️⃣ Installation**
+```
+## Installation
+### Prerequisites
+- Python 3.8 or later  
+- Poetry (for dependency management)  
+
+### Setup
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/07Raunak/pubmed-fetcher.git
+   cd pubmed-fetcher
+   ```
+2. Install dependencies:
+   ```bash
+   poetry install
+   ```
+3. Set up the `.env` file:
+   ```
+   GEMINI_API_KEY=your_api_key_here
+   ```
+
+---
+
+### **5️⃣ Usage**
+```
+## Usage
+To fetch research papers, run:
 ```bash
 poetry run get-papers-list "cancer research" -f results.csv
 ```
-- The results will be saved in `results.csv`.  
-- To enable debugging, add the `-d` flag:  
+This will search for papers related to **"cancer research"** and save them in `results.csv`.
+
+For debugging mode:
+```bash
+poetry run get-papers-list "AI in medicine" -f results.csv -d
+```
+
+---
+
+### **6️⃣ Example Output**
+```csv
+PubmedID, Title, Publication Date, Authors, DOI Link, Non-Academic Authors, Company Affiliation, Non-Academic Detected
+40072452, "Evaluation of...", 2025 Mar 12, "Tur P, Oldenburger E", "https://doi.org/10.1097/SPC...", N/A, N/A, No
+40072444, "Risk Prediction...", 2025 Mar 12, "Ma B, Gandhi M", "https://doi.org/10.1001/jamadermatol...", N/A, N/A, No
+```
+
+---
+
+### **7️⃣ Contribution Guidelines**
+```
+## Contributing
+1. Fork the repo and create a new branch.
+2. Make your changes and commit them.
+3. Push to your fork and create a Pull Request.
+```
+
+---
+
+### **8️⃣ License**
+```
+## License
+This project is licensed under the MIT License.
+```
+
+---
+
+### **📌 Next Steps**
+- Create a `README.md` file in your project.
+- Copy and paste the above content into the file.
+- Commit and push it to GitHub:
   ```bash
-  poetry run get-papers-list "AI in healthcare" -d
+  git add README.md
+  git commit -m "Added README file"
+  git push origin main
   ```
 
----
-
-## **📊 Output Format**  
-The fetched data is stored in a CSV file with columns:  
-- **PubmedID** – Unique PubMed ID  
-- **Title** – Paper title  
-- **Publication Date** – When it was published  
-- **Authors** – List of authors  
-- **DOI Link** – Direct DOI link  
-- **Non-Academic Authors** – If any author belongs to a company  
-- **Company Affiliation** – Organization details (if applicable)  
-- **Non-Academic Detected** – Whether the paper has non-academic affiliations  
-
----
-
-## **📝 Example Output**
-| PubmedID  | Title  | Authors  | DOI Link  | Non-Academic Detected  |
-|-----------|--------|----------|-----------|------------------------|
-| 40072452  | Evaluation of Cancer Treatments | Tur P, Oldenburger E  | [Link](https://doi.org/10.1097/SPC.0000000000000750) | No  |
-
----**.  
-
----
-
-Let me know if you need modifications! 🚀"# Aganitha Project" 
