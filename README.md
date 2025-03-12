@@ -68,10 +68,7 @@ The fetched data is stored in a CSV file with columns:
 |-----------|--------|----------|-----------|------------------------|
 | 40072452  | Evaluation of Cancer Treatments | Tur P, Oldenburger E  | [Link](https://doi.org/10.1097/SPC.0000000000000750) | No  |
 
----
-
-## **📄 License**  
-This project is **MIT licensed**.  
+---**.  
 
 ---
 
