@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "aganitha-project"
+version = "0.1.0"
+description = "PubMed Research Paper Fetcher"
+authors = ["Raunak <raunak2002pcc@gmail.com>"]
+readme = "README.md"
+packages = [{include = "pubmed_fetcher"}]
+
+[tool.poetry.dependencies]
+python = ">=3.9,<3.12"
+requests = ">=2.32.3,<3.0.0"
+pandas = ">=2.2.3,<3.0.0"
+python-dotenv = ">=1.0.1,<2.0.0"
+
+[tool.poetry.scripts]
+get-papers-list = "pubmed_fetcher.pubmed_fetcher:main"
+
+
